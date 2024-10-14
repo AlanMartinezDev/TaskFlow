@@ -4,7 +4,7 @@
     <div class="contenedor-sm">
         <p class="descripcion-pagina">Restablecer tu contraseña</p>
 
-        <form action="/restablecer" method="post" class="formulario">
+        <form action="/restablecer" method="POST" class="formulario">
             <div class="campo">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Tu password">

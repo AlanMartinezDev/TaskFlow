@@ -4,7 +4,7 @@
     <div class="contenedor-sm">
         <p class="descripcion-pagina">Recupera tu contraseña</p>
 
-        <form action="/olvide" method="post" class="formulario">
+        <form action="/olvide" method="POST" class="formulario">
             <div class="campo">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Tu email">

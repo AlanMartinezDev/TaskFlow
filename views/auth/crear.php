@@ -4,14 +4,16 @@
     <div class="contenedor-sm">
         <p class="descripcion-pagina">Crea tu cuenta en TaskFlow</p>
 
-        <form action="/crear" method="post" class="formulario">
+        <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
+
+        <form action="/crear" method="POST" class="formulario">
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre">
+                <input type="text" name="nombre" id="nombre" value="<?php echo $usuario->nombre; ?>" placeholder="Tu nombre">
             </div>
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Tu email">
+                <input type="email" name="email" id="email" value="<?php echo $usuario->email ?>" placeholder="Tu email">
             </div>
             <div class="campo">
                 <label for="password">Password</label>
