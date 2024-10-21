@@ -4,14 +4,20 @@
     <div class="contenedor-sm">
         <p class="descripcion-pagina">Restablecer tu contraseña</p>
 
-        <form action="/restablecer" method="POST" class="formulario">
-            <div class="campo">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Tu password">
-            </div>
+        <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-            <input type="submit" value="Restablecer" class="boton">
-        </form>
+        <?php if ($mostrar) { ?>
+
+            <form method="POST" class="formulario">
+                <div class="campo">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Tu password">
+                </div>
+
+                <input type="submit" value="Restablecer" class="boton">
+            </form>
+
+        <?php } ?>
 
         <div class="acciones">
             <a href="/">Iniciar sesión</a>
