@@ -34,7 +34,7 @@ class LoginController
                         $_SESSION['login'] = true;
 
                         // Redireccionar
-                        header('Location: /proyectos');
+                        header('Location: /dashboard');
                     } else {
                         Usuario::setAlerta('error', 'Contraseña incorrecta');
                     }
@@ -53,7 +53,7 @@ class LoginController
 
     public static function logout()
     {
-        echo "desde login";
+        echo "desde logout";
     }
 
     public static function crear(Router $router)
