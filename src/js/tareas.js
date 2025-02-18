@@ -11,7 +11,7 @@
             <legend>Añade una nueva tarea</legend>
             <div class="campo">
                 <label for="tarea">Tarea</label>
-                <input type="text" name="tarea" id="tarea" placeholder="Añadir tarea al proyexto">
+                <input type="text" name="tarea" id="tarea" placeholder="Añadir tarea al proyecto">
             </div>
             <div class="opciones">
                 <input type="submit" class="submit-nueva-tarea" value="Añadir tarea">
