@@ -36,7 +36,7 @@ class Email
 
         $contenido = '<html>';
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> has creado tu cuenta en TaskFlow, solo debes confirmarla en el siguiente enlace:</p>";
-        $contenido .= "<a href='http://localhost:3000/confirmar?token=" . $this->token . "'>Confirmar cuenta</a>";
+        $contenido .= "<a href='http://localhost:4321/confirmar?token=" . $this->token . "'>Confirmar cuenta</a>";
         $contenido .= '<p>En el caso de que no hayas creado esta cuenta, por favor, ignora este mensaje.</p>';
         $contenido .= '</html>';
 
@@ -65,7 +65,7 @@ class Email
 
         $contenido = '<html>';
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> parece que has olvidado tu contraseña, puedes restablecerla en el siguiente enlace:</p>";
-        $contenido .= "<a href='http://localhost:3000/restablecer?token=" . $this->token . "'>Restablecer contraseña</a>";
+        $contenido .= "<a href='http://localhost:4321/restablecer?token=" . $this->token . "'>Restablecer contraseña</a>";
         $contenido .= '<p>En el caso de que no quieras restablecer tu contraseña, por favor, ignora este mensaje.</p>';
         $contenido .= '</html>';
 
