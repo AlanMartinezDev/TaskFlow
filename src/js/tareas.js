@@ -77,7 +77,29 @@
     }
 
     // Consultar el servidor para añadir una nueva tarea al proyecto
-    function agregarTarea(tarea) {
+    async function agregarTarea(tarea) {
+        // Construir la petición
+        const datos = new FormData();
+        datos.append('nombre', tarea);
+        datos.append('proyectoId', obtenerProyecto());
 
+        try {
+            const url = 'http://localhost:4321/api/tarea';
+            const respuesta = await fetch(url, {
+                method: 'POST',
+                body: datos
+            });
+
+            const resultado = await respuesta.json();
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    function obtenerProyecto() {
+        const proyectoParams = new URLSearchParams(window.location.search);
+        const proyecto = Object.fromEntries(proyectoParams.entries());
+        return proyecto.id;
     }
 })();
